@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap");
 
-/* Variables for consistent colors and fonts */
 :root {
   --Nutmeg: hsl(14, 45%, 36%);
   --DarkRaspberry: hsl(332, 51%, 32%);
@@ -15,27 +14,27 @@
 }
 
 body {
-  background-color: var(--Eggshell); /* Màu nền nhạt */
-  font-family: var(--font-sans-serif); /* Font mặc định cho body */
+  background-color: var(--Eggshell);
+  font-family: var(--font-sans-serif);
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Căn trên cùng */
+  align-items: flex-start;
   min-height: 100vh;
-  padding-top: 50px; /* Thêm khoảng trống trên cùng */
-  padding-bottom: 50px; /* Thêm khoảng trống dưới cùng */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .recipe-card {
-  background-color: var(--RoseWhite); /* Màu nền của card */
+  background-color: var(--RoseWhite);
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Hơi đổ bóng */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 700px; /* Giới hạn chiều rộng của card */
+  max-width: 700px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Đảm bảo ảnh bo góc */
+  overflow: hidden;
 }
 
 .recipe-image {
@@ -48,7 +47,7 @@ body {
 }
 
 .content-wrapper {
-  padding: 30px 40px; /* Padding tổng thể cho nội dung bên trong */
+  padding: 30px 40px;
 }
 
 .recipe-title {
@@ -67,52 +66,48 @@ p.description {
   margin-bottom: 30px;
 }
 
-/* Preparation Time Section */
 .preparation-time {
-  background-color: var(--RoseWhite); /* Màu nền nhẹ hơn */
+  background-color: hsl(331, 70%, 87%);
   padding: 25px;
   border-radius: 10px;
   margin-bottom: 30px;
-  background-color: hsl(331, 70%, 87%); /* Màu hồng nhạt */
 }
 
 .preparation-time h3 {
-  color: var(--DarkRaspberry); /* Màu tím sẫm */
+  color: var(--DarkRaspberry);
   font-size: 1.2em;
   margin-top: 0;
   margin-bottom: 15px;
 }
 
 .preparation-time ul {
-  list-style-type: disc; /* Dấu chấm */
-  list-style-position: inside; /* Dấu chấm nằm trong padding */
-  padding-left: 10px; /* Điều chỉnh padding cho dấu chấm */
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 10px;
   margin: 0;
 }
 
 .preparation-time ul li {
   color: var(--WengeBrown);
   line-height: 1.8;
-  padding-left: 15px; /* Khoảng cách giữa dấu chấm và chữ */
-  text-indent: -15px; /* Đẩy chữ vào trong so với dấu chấm */
+  padding-left: 15px;
+  text-indent: -15px;
 }
 
 .preparation-time ul li b {
-  color: var(--DarkCharcoal); /* Màu đậm cho chữ in đậm */
+  color: var(--DarkCharcoal);
 }
 
-/* General H2 Styling (for Ingredients, Instructions, Nutrition) */
 .content-wrapper h2 {
   font-family: var(--font-serif);
-  color: var(--Nutmeg); /* Màu nâu đậm */
+  color: var(--Nutmeg);
   font-size: 1.8em;
   margin-top: 30px;
   margin-bottom: 25px;
-  padding-bottom: 15px; /* Thêm padding dưới tiêu đề */
-  border-bottom: 1px solid var(--LightGrey); /* Đường kẻ dưới tiêu đề */
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--LightGrey);
 }
 
-/* Ingredients Section */
 .ingredients ul {
   list-style-type: disc;
   list-style-position: inside;
@@ -128,9 +123,8 @@ p.description {
   text-indent: -15px;
 }
 
-/* Instructions Section */
 .instructions ol {
-  list-style-type: decimal; /* Số thứ tự */
+  list-style-type: decimal;
   list-style-position: inside;
   padding-left: 10px;
   margin-bottom: 30px;
@@ -140,45 +134,40 @@ p.description {
 .instructions ol li {
   color: var(--WengeBrown);
   line-height: 1.8;
-  padding-left: 15px; /* Khoảng cách giữa số và chữ */
-  text-indent: -15px; /* Đẩy chữ vào trong so với số */
+  padding-left: 15px;
+  text-indent: -15px;
 }
 
 .instructions ol li b {
   color: var(--DarkCharcoal);
 }
 
-/* Nutrition Section (styling from previous request, slightly adjusted) */
 .nutrition-card {
-  /* Background and shadow are handled by .recipe-card already for the whole component */
-  /* Remove redundant background-color and box-shadow here if they are for the whole card */
-  padding: 0; /* Remove padding here as content-wrapper handles it */
+  padding: 0;
   width: 100%;
-  max-width: none; /* Allow it to take full width of parent */
+  max-width: none;
 }
 
 .nutrition-card h2 {
-  /* Style already defined in general H2 styling above */
-  border-bottom: none; /* Remove bottom border if already added by general h2 */
-  margin-top: 0; /* Reset margin top as this is the last section */
+  border-bottom: none;
+  margin-top: 0;
 }
 
 .nutrition-card p.nutrition-description {
-  /* Changed class name to avoid conflict */
   color: var(--WengeBrown);
   font-size: 1em;
-  margin-bottom: 20px; /* Reduced margin bottom */
+  margin-bottom: 20px;
   line-height: 1.5;
 }
 
 .nutrition-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px; /* Add some space above the table */
+  margin-top: 15px;
 }
 
 .nutrition-table tr {
-  border-bottom: 1px solid var(--LightGrey); /* Đường kẻ nhạt */
+  border-bottom: 1px solid var(--LightGrey);
 }
 
 .nutrition-table tr:last-child {
@@ -186,48 +175,47 @@ p.description {
 }
 
 .nutrition-table td {
-  padding: 12px 0; /* Reduced padding for rows */
-  font-size: 1em; /* Reduced font size slightly */
+  padding: 12px 0;
+  font-size: 1em;
   color: var(--WengeBrown);
 }
 
 .nutrition-table td:first-child {
   text-align: left;
-  padding-left: 20px; /* Indent the first column */
+  padding-left: 20px;
 }
 
 .nutrition-table td:last-child {
   text-align: right;
   font-weight: bold;
-  color: var(--Nutmeg); /* Màu nâu đậm cho giá trị */
+  color: var(--Nutmeg);
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   body {
-    padding: 0; /* Remove body padding on small screens */
-    align-items: flex-start; /* Ensure it starts from top */
+    padding: 0;
+    align-items: flex-start;
   }
 
   .recipe-card {
-    border-radius: 0; /* No border radius on small screens */
-    max-width: 100%; /* Take full width */
-    box-shadow: none; /* No shadow on small screens */
+    border-radius: 0;
+    max-width: 100%;
+    box-shadow: none;
   }
 
   .recipe-image {
-    border-radius: 0; /* No border radius on small screens */
+    border-radius: 0;
   }
 
   .content-wrapper {
-    padding: 20px 25px; /* Adjust padding for smaller screens */
+    padding: 20px 25px;
   }
 
   .recipe-title {
-    font-size: 2em; /* Smaller title font */
+    font-size: 2em;
   }
 
   .content-wrapper h2 {
-    font-size: 1.5em; /* Smaller section titles */
+    font-size: 1.5em;
   }
 }
