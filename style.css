@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap");
+
+/* Variables for consistent colors and fonts */
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --DarkRaspberry: hsl(332, 51%, 32%);
+  --RoseWhite: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --LightGrey: hsl(30, 18%, 87%);
+  --WengeBrown: hsl(30, 10%, 34%);
+  --DarkCharcoal: hsl(24, 5%, 18%);
+
+  --font-serif: "Young Serif", serif;
+  --font-sans-serif: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--Eggshell); /* Màu nền nhạt */
+  font-family: var(--font-sans-serif); /* Font mặc định cho body */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Căn trên cùng */
+  min-height: 100vh;
+  padding-top: 50px; /* Thêm khoảng trống trên cùng */
+  padding-bottom: 50px; /* Thêm khoảng trống dưới cùng */
+}
+
+.recipe-card {
+  background-color: var(--RoseWhite); /* Màu nền của card */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Hơi đổ bóng */
+  width: 100%;
+  max-width: 700px; /* Giới hạn chiều rộng của card */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Đảm bảo ảnh bo góc */
+}
+
+.recipe-image {
+  padding: 20px 20px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-self: center;
+  border-radius: 40px;
+}
+
+.content-wrapper {
+  padding: 30px 40px; /* Padding tổng thể cho nội dung bên trong */
+}
+
+.recipe-title {
+  font-family: var(--font-serif);
+  color: var(--DarkCharcoal);
+  font-size: 2.5em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+p.description {
+  color: var(--WengeBrown);
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Preparation Time Section */
+.preparation-time {
+  background-color: var(--RoseWhite); /* Màu nền nhẹ hơn */
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: hsl(331, 70%, 87%); /* Màu hồng nhạt */
+}
+
+.preparation-time h3 {
+  color: var(--DarkRaspberry); /* Màu tím sẫm */
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.preparation-time ul {
+  list-style-type: disc; /* Dấu chấm */
+  list-style-position: inside; /* Dấu chấm nằm trong padding */
+  padding-left: 10px; /* Điều chỉnh padding cho dấu chấm */
+  margin: 0;
+}
+
+.preparation-time ul li {
+  color: var(--WengeBrown);
+  line-height: 1.8;
+  padding-left: 15px; /* Khoảng cách giữa dấu chấm và chữ */
+  text-indent: -15px; /* Đẩy chữ vào trong so với dấu chấm */
+}
+
+.preparation-time ul li b {
+  color: var(--DarkCharcoal); /* Màu đậm cho chữ in đậm */
+}
+
+/* General H2 Styling (for Ingredients, Instructions, Nutrition) */
+.content-wrapper h2 {
+  font-family: var(--font-serif);
+  color: var(--Nutmeg); /* Màu nâu đậm */
+  font-size: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  padding-bottom: 15px; /* Thêm padding dưới tiêu đề */
+  border-bottom: 1px solid var(--LightGrey); /* Đường kẻ dưới tiêu đề */
+}
+
+/* Ingredients Section */
+.ingredients ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.ingredients ul li {
+  color: var(--WengeBrown);
+  line-height: 1.8;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+/* Instructions Section */
+.instructions ol {
+  list-style-type: decimal; /* Số thứ tự */
+  list-style-position: inside;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.instructions ol li {
+  color: var(--WengeBrown);
+  line-height: 1.8;
+  padding-left: 15px; /* Khoảng cách giữa số và chữ */
+  text-indent: -15px; /* Đẩy chữ vào trong so với số */
+}
+
+.instructions ol li b {
+  color: var(--DarkCharcoal);
+}
+
+/* Nutrition Section (styling from previous request, slightly adjusted) */
+.nutrition-card {
+  /* Background and shadow are handled by .recipe-card already for the whole component */
+  /* Remove redundant background-color and box-shadow here if they are for the whole card */
+  padding: 0; /* Remove padding here as content-wrapper handles it */
+  width: 100%;
+  max-width: none; /* Allow it to take full width of parent */
+}
+
+.nutrition-card h2 {
+  /* Style already defined in general H2 styling above */
+  border-bottom: none; /* Remove bottom border if already added by general h2 */
+  margin-top: 0; /* Reset margin top as this is the last section */
+}
+
+.nutrition-card p.nutrition-description {
+  /* Changed class name to avoid conflict */
+  color: var(--WengeBrown);
+  font-size: 1em;
+  margin-bottom: 20px; /* Reduced margin bottom */
+  line-height: 1.5;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px; /* Add some space above the table */
+}
+
+.nutrition-table tr {
+  border-bottom: 1px solid var(--LightGrey); /* Đường kẻ nhạt */
+}
+
+.nutrition-table tr:last-child {
+  border-bottom: none;
+}
+
+.nutrition-table td {
+  padding: 12px 0; /* Reduced padding for rows */
+  font-size: 1em; /* Reduced font size slightly */
+  color: var(--WengeBrown);
+}
+
+.nutrition-table td:first-child {
+  text-align: left;
+  padding-left: 20px; /* Indent the first column */
+}
+
+.nutrition-table td:last-child {
+  text-align: right;
+  font-weight: bold;
+  color: var(--Nutmeg); /* Màu nâu đậm cho giá trị */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  body {
+    padding: 0; /* Remove body padding on small screens */
+    align-items: flex-start; /* Ensure it starts from top */
+  }
+
+  .recipe-card {
+    border-radius: 0; /* No border radius on small screens */
+    max-width: 100%; /* Take full width */
+    box-shadow: none; /* No shadow on small screens */
+  }
+
+  .recipe-image {
+    border-radius: 0; /* No border radius on small screens */
+  }
+
+  .content-wrapper {
+    padding: 20px 25px; /* Adjust padding for smaller screens */
+  }
+
+  .recipe-title {
+    font-size: 2em; /* Smaller title font */
+  }
+
+  .content-wrapper h2 {
+    font-size: 1.5em; /* Smaller section titles */
+  }
+}
